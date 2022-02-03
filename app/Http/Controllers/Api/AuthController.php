@@ -32,10 +32,10 @@ class AuthController extends Controller
             if (\password_verify($request->password, $user->password)) {
                 return $this->success($user);
             } else {
-                return $this->error('Password Salah');
+                return $this->error('Password yang dimasukkan salah !');
             }
         }
-        return $this->error('User tidak ditemukan');
+        return $this->error('email tidak ditemukan !');
     }
     /** end login */
 
